@@ -125,7 +125,6 @@ setStr.onclick = async () => {
   console.log(ssInputValue)
   await str.methods.setStore(ssInputValue).send({from: ethereum.selectedAddress})
   window.location.reload();
-
 }
 
 
@@ -133,7 +132,7 @@ setStr.onclick = async () => {
  window.ethereum.on('accountsChanged', async function (accounts) {
   console.log('accountsChanges',accounts);
  
-  await ethereum.request({ method: 'eth_requestAccounts'})
+  await ethereum.request({ method: 'eth_requestAccounts'});
   // grab mm-current-account
   // and populate it with the current address
   var mmCurrentAccount = document.getElementById('mm-current-account');
